@@ -1,0 +1,15 @@
+# je definis l'image d'origine du docker et sa version (le mieux c'est la dernière)
+FROM nginx:1.19.0 
+# je récupère ce qu'il y a dans le dossier html de nginx
+COPY src /usr/share/nginx/html
+# je supprime le fichier nginx.conf qui contient la config d'origine
+RUN rm /etc/nginx/conf.d/default.conf
+# je copie ma configuration personnelle
+COPY nginx/nginx.conf /etc/nginx/conf.d
+# je met à jour le docker 
+RUN apt-get update -y
+# je définis le port utilisé
+EXPOSE 80
+# une fois le conteneur démarré, je dis quoi faire pour docker 
+CMD [ "nginx","-g","daemon off," ]
+# on peut choper la derinère version de nginx sen faisant ctrl clic gauche sur le lien nginx

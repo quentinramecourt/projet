@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"href = "style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tableau des utiilisateurs du site</title>
+</head>
+<h1>utilisateurs du site</h1>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js%22%3E</script>
+<script type=" text= "/add_utilsateur.js">
+    
+    $(document).ready(function() {
+        $(".add").click(function() {
+            var nom = $("#nom").val();
+            var email = $("#email").val();
+            var ligne = "<tr><td><input type='checkbox' name='select'></td><td>" + nom + "</td><td>" + email + "</td></tr>";
+            $("table.test").append(ligne);
+        });
+        $(".delete").click(function() {
+            $("table.test").find('input[name="select"]').each(function() {
+                if ($(this).is(":checked")) {
+                    $(this).parents("table.test tr").remove();
+                }
+            });
+        });
+    });
+</script>
+</head>
+
+<body>
+    <input type="text" id="nom" placeholder="Nom">
+    <input type="text" id="email" placeholder="Adresse email">
+    <input type="button" class="add" value="Ajouter une ligne">
+    <table class="test">
+        <tr>
+            <th>Sélectionner</th>
+            <th>Nom</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td><input type="checkbox" name="select"></td>
+            <td>Thomas Babtise</td>
+            <td>thomas@waytolearnx.com</td>
+        </tr>
+    </table>
+    <button type="button" class="delete">Supprimer une ligne</button>
+</body>
+<button type="submit">envoyer</button>
+<br/> <br/>
+<a href="/premiere_page/premiere_page.html">retour vers la page principale</a>
+
+</html>

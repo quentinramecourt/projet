@@ -1,0 +1,11 @@
+version: '3'
+
+services: 
+    userDb:
+        image: mysql
+        evnironment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_database: users
+        ports: 
+            -"3306:3306"
+        

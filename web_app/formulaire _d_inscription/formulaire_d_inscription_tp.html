@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../formulaire _d_inscription/style_formaulaire.css">   
+    <title>formulaire d'inscription</title>
+</head>
+<h1>formulaire d'inscription</h1>
+<h2>salut le p'tit nouveau!</h2>
+<h4>pour des raisons de sécurité, va falloir que tu remplisses ce formulaire</h4>
+<body>
+    <form id = "enregistrement">
+       <div>
+        <label> nom :
+            <input type = 'text' id = 'nom'>
+        </label>
+    </div>
+    <div>
+        <label for = 'prenom'> prénom:</label>
+        <input type = 'text' name = 'prenom' id = 'prenom' required>
+    </div>
+       <div>
+        <label for = 'date_de_naissance'> date de naissance:</label>
+        <input type = 'date' name = 'date' id = 'date_naiss' required>
+    </div>
+    <div>
+        <label for = 'email'> adresse mail:</label>
+        <input type = 'email' name = 'email' id = 'email' required>
+    </div>
+    <div>
+        <label for = 'login'> nom de compte:</label>
+        <input type = 'text' name = 'login' id = 'login' placeholder="ex: biloute" minlength="4" required>
+    </div>  
+    <div>     
+        <label for = 'mot de passe'> mot de passe:</label>
+        <input type = 'password' name = 'mdp' id = 'mdp'placeholder ="ex :fez3Pitt" minlength="8" maxlength= "16" required>
+    </div> 
+       
+    <div>
+   <a href="../premiere_page/premiere_page.html">
+        <input type="button" value="pour retourner aux vestiaires clique ici "></a>
+    </div>
+    <div>
+        <a href="../admin/admin.html">
+        <input type="button" value="si valides pas tu passeras PAR DESSUS LA TROISIEME COOORDE!!!"></a>
+    </div>
+    
+</form>
+   
+</body>
+
+
+
+ 
+</html>
